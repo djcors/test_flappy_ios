@@ -17,7 +17,7 @@ class GameScene: SKScene {
     let VelocidadSuelo: CGFloat = 3.5
     var AccionMoverFondo: SKAction!
     var AccionMoverFondoForever: SKAction!
-    let ReiniciarFondo: CGFloat = -242.2
+    let ReiniciarFondo: CGFloat = -164
     
     /* Construimos el fondo */
     func ConstructorEscenario(){
