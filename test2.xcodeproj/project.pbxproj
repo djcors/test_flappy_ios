@@ -16,13 +16,14 @@
 		1867B8D21B059C1B0056B5F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1867B8D01B059C1B0056B5F7 /* LaunchScreen.xib */; };
 		1867B8DE1B059C1B0056B5F7 /* test2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1867B8DD1B059C1B0056B5F7 /* test2Tests.swift */; };
 		1867B8EF1B05A2CD0056B5F7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 1867B8EC1B05A2CD0056B5F7 /* background.png */; };
-		1867B8F01B05A2CD0056B5F7 /* pair.png in Resources */ = {isa = PBXBuildFile; fileRef = 1867B8ED1B05A2CD0056B5F7 /* pair.png */; };
 		1867B8F11B05A2CD0056B5F7 /* personaje.png in Resources */ = {isa = PBXBuildFile; fileRef = 1867B8EE1B05A2CD0056B5F7 /* personaje.png */; };
 		18939D6E1B069B530080C4DA /* ave1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18939D6C1B069B530080C4DA /* ave1.png */; };
 		18939D6F1B069B530080C4DA /* ave2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18939D6D1B069B530080C4DA /* ave2.png */; };
 		18939D711B069BEC0080C4DA /* suelo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18939D701B069BEC0080C4DA /* suelo.png */; };
 		18939D731B069C220080C4DA /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18939D721B069C220080C4DA /* fondo.png */; };
 		18939D751B06A1C40080C4DA /* montes.png in Resources */ = {isa = PBXBuildFile; fileRef = 18939D741B06A1C40080C4DA /* montes.png */; };
+		18939D841B06BF5B0080C4DA /* tubo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18939D821B06BF5B0080C4DA /* tubo1.png */; };
+		18939D851B06BF5B0080C4DA /* tubo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 18939D831B06BF5B0080C4DA /* tubo2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +50,14 @@
 		1867B8DC1B059C1B0056B5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1867B8DD1B059C1B0056B5F7 /* test2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test2Tests.swift; sourceTree = "<group>"; };
 		1867B8EC1B05A2CD0056B5F7 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		1867B8ED1B05A2CD0056B5F7 /* pair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pair.png; sourceTree = "<group>"; };
 		1867B8EE1B05A2CD0056B5F7 /* personaje.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personaje.png; sourceTree = "<group>"; };
 		18939D6C1B069B530080C4DA /* ave1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ave1.png; sourceTree = "<group>"; };
 		18939D6D1B069B530080C4DA /* ave2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ave2.png; sourceTree = "<group>"; };
 		18939D701B069BEC0080C4DA /* suelo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suelo.png; sourceTree = "<group>"; };
 		18939D721B069C220080C4DA /* fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo.png; sourceTree = "<group>"; };
 		18939D741B06A1C40080C4DA /* montes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = montes.png; sourceTree = "<group>"; };
+		18939D821B06BF5B0080C4DA /* tubo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tubo1.png; sourceTree = "<group>"; };
+		18939D831B06BF5B0080C4DA /* tubo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tubo2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,9 +144,10 @@
 				18939D6D1B069B530080C4DA /* ave2.png */,
 				18939D701B069BEC0080C4DA /* suelo.png */,
 				18939D741B06A1C40080C4DA /* montes.png */,
+				18939D821B06BF5B0080C4DA /* tubo1.png */,
+				18939D831B06BF5B0080C4DA /* tubo2.png */,
 				18939D721B069C220080C4DA /* fondo.png */,
 				1867B8EC1B05A2CD0056B5F7 /* background.png */,
-				1867B8ED1B05A2CD0056B5F7 /* pair.png */,
 				1867B8EE1B05A2CD0056B5F7 /* personaje.png */,
 			);
 			path = imagenes;
@@ -234,6 +237,7 @@
 				18939D731B069C220080C4DA /* fondo.png in Resources */,
 				1867B8D21B059C1B0056B5F7 /* LaunchScreen.xib in Resources */,
 				18939D751B06A1C40080C4DA /* montes.png in Resources */,
+				18939D851B06BF5B0080C4DA /* tubo2.png in Resources */,
 				18939D711B069BEC0080C4DA /* suelo.png in Resources */,
 				18939D6F1B069B530080C4DA /* ave2.png in Resources */,
 				1867B8EF1B05A2CD0056B5F7 /* background.png in Resources */,
@@ -241,7 +245,7 @@
 				1867B8F11B05A2CD0056B5F7 /* personaje.png in Resources */,
 				1867B8C61B059C1B0056B5F7 /* GameScene.sks in Resources */,
 				1867B8CD1B059C1B0056B5F7 /* Main.storyboard in Resources */,
-				1867B8F01B05A2CD0056B5F7 /* pair.png in Resources */,
+				18939D841B06BF5B0080C4DA /* tubo1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
