@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     var personaje = SKSpriteNode()
     let monteYPos: CGFloat = 300
     let TotalPiezasFondo = 5
@@ -35,6 +35,11 @@ class GameScene: SKScene {
     var fallInertiaTime: CGFloat!
     var lastUpdateTimeInterval: CFTimeInterval = -1.0
     var deltaTime: CGFloat = 0.0
+    let floor_distance: CGFloat = 72.0
+    let FSBoundaryCategory: UInt32 = 1 << 0
+    let FSPlayerCategory: UInt32   = 1 << 1
+    let FSPipeCategory: UInt32     = 1 << 2
+    let FSGapCategory: UInt32      = 1 << 3
     
     /* Construimos el fondo */
     func ConstructorEscenario(){
@@ -66,7 +71,7 @@ class GameScene: SKScene {
                 sprite.position = CGPointMake((wEspacio * 2) + PiezasFondo[x - 1].position.x,PiezasFondo[x - 1].position.y)
             }
             
-            sprite.zPosition = 2
+            sprite.zPosition = 3
             var TopeSuelo = SKNode()
             TopeSuelo.position = CGPointMake(0, sprite.size.height/2)
             TopeSuelo.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake( self.frame.size.width, sprite.size.height) )
@@ -83,7 +88,14 @@ class GameScene: SKScene {
         fallInertiaTime = CGFloat(jumpDuration) * 0.3
         AccionMoverFondo = SKAction.moveByX(-VelocidadSuelo, y: 0, duration: 0.02)
         AccionMoverFondoForever = SKAction.repeatActionForever(SKAction.sequence([AccionMoverFondo]))
+        
+        runAction(SKAction.repeatActionForever(SKAction.sequence([SKAction.waitForDuration(6.0), SKAction.runBlock { self.SetupTubos()}])))
+        
         self.physicsWorld.gravity = CGVectorMake(0.0, 0.0)
+        physicsWorld.gravity = CGVector(dx: 0.0, dy: -5.0)
+        physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 0.0, y: floor_distance, width: size.width, height: size.height - floor_distance))
+        physicsBody?.categoryBitMask = FSBoundaryCategory
+        physicsBody?.collisionBitMask = FSPlayerCategory
     }
     
     func startGame()
@@ -178,6 +190,7 @@ class GameScene: SKScene {
         
         self.addChild(ConjutoTubo)
     }
+
     
     override func didMoveToView(view: SKView) {
         
@@ -195,6 +208,7 @@ class GameScene: SKScene {
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         /* Called when a touch begins */
+        personaje.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 25))
         touchDetected = true
         isJumping = true
         
