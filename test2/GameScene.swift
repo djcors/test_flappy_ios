@@ -207,7 +207,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        /* Called when a touch begins */
+        /* Activamos touch */
         personaje.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 25))
         touchDetected = true
         isJumping = true
